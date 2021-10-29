@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.dhxxn.bindingapp.view.main.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_main_to_photo"
+            app:destination="@id/photoFragment" />
+        <action
+            android:id="@+id/action_main_to_favorite"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_main_to_tag"
+            app:destination="@id/tagFragment" />
+        <action
+            android:id="@+id/action_main_to_search"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.dhxxn.bindingapp.view.photo.PhotoFragment"
+        android:label="PhotoFragment" >
+        <action
+            android:id="@+id/action_photo_to_detail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.dhxxn.bindingapp.view.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <action
+            android:id="@+id/action_favorite_to_detail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagFragment"
+        android:name="com.dhxxn.bindingapp.view.tag.TagFragment"
+        android:label="TagFragment" >
+        <action
+            android:id="@+id/action_tag_to_detail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.dhxxn.bindingapp.view.search.SearchFragment"
+        android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.dhxxn.bindingapp.view.detail.DetailFragment"
+        android:label="DetailFragment" />
+</navigation>
