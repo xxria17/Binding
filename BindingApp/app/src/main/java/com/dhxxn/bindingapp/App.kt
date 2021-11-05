@@ -1,4 +1,4 @@
-package com.dhxxn.bindingapp.view
+package com.dhxxn.bindingapp
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

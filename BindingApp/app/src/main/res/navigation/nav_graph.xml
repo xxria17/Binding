@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/mainNavFragment">
 
-    <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.dhxxn.bindingapp.view.main.MainFragment"
-        android:label="MainFragment" >
-        <action
-            android:id="@+id/action_main_to_photo"
-            app:destination="@id/photoFragment" />
-        <action
-            android:id="@+id/action_main_to_favorite"
-            app:destination="@id/favoriteFragment" />
-        <action
-            android:id="@+id/action_main_to_tag"
-            app:destination="@id/tagFragment" />
-        <action
-            android:id="@+id/action_main_to_search"
-            app:destination="@id/searchFragment" />
-    </fragment>
     <fragment
         android:id="@+id/photoFragment"
         android:name="com.dhxxn.bindingapp.view.photo.PhotoFragment"
         android:label="PhotoFragment" >
         <action
-            android:id="@+id/action_photo_to_detail"
+            android:id="@+id/action_photoFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
     </fragment>
     <fragment
@@ -52,4 +35,12 @@
         android:id="@+id/detailFragment"
         android:name="com.dhxxn.bindingapp.view.detail.DetailFragment"
         android:label="DetailFragment" />
+    <fragment
+        android:id="@+id/mainNavFragment"
+        android:name="com.dhxxn.bindingapp.view.mainnav.MainNavFragment"
+        android:label="MainNavFragment">
+        <action
+            android:id="@+id/action_mainNavFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
 </navigation>
