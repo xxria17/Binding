@@ -16,11 +16,13 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/photo_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            tools:itemCount="20"
+            tools:itemCount="10"
             app:spanCount="4"
+            android:paddingStart="5dp"
             android:paddingEnd="5dp"
             tools:listitem="@layout/item_photo"/>
     </FrameLayout>
