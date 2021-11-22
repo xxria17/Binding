@@ -65,50 +65,73 @@
                 android:id="@+id/main_frameLayout"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/tabLayout"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
             </FrameLayout>
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                app:tabTextColor="#777777"
-                app:tabSelectedTextColor="@color/black"
-                app:tabIndicatorColor="@color/black"
-                app:tabTextAppearance="@style/tabStyle"
-                app:tabIndicatorFullWidth="false"
-                tools:layout_editor_absoluteY="683dp">
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
-                <com.google.android.material.tabs.TabItem
+                <TextView
+                    android:id="@+id/main_photo_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="사진" />
 
-                <com.google.android.material.tabs.TabItem
+                <TextView
+                    android:id="@+id/main_tag_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="태그" />
 
-                <com.google.android.material.tabs.TabItem
+                <TextView
+                    android:id="@+id/main_fav_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="마음함" />
 
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:icon="@drawable/menu" />
-
-            </com.google.android.material.tabs.TabLayout>
-
+                <ImageView
+                    android:id="@+id/main_setting_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    app:srcCompat="@drawable/menu" />
+            </LinearLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
